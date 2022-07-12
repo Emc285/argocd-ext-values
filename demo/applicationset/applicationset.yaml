@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: example
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/Emc285/argocd-ext-values.git
+        revision: HEAD
+        files:
+          - path: demo
+  template:
+    metadata:
+      name: 'example'
+    spec:
+      project: default
+      source:
+        helm:
+          valueFiles:
+            - values.yaml
+          values: |-
+            {{values}}
+        repoURL: https://github.com/Emc285/JT-values-argocd.git
+        targetRevision: HEAD
+        path: "configs/nginx"
+      destination:
+        server: "https://kubernetes.default.svc"
+        namespace: default
