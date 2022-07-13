@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         revision: HEAD
       files:
-        - path: "demo/applicationset/applicationset.yaml"
+        - path: "demo/values.json"
   template:
     metadata:
       name: 'example'
@@ -17,11 +17,11 @@ spec:
       source:
 #        helm:
 #          valueFiles:
-#            - values.yaml
+#            - values.json
 #          values: |-
 ##            {{values}}
 #          values: |
-#            values.yaml
+#            values.json
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         targetRevision: HEAD
         path: demo
