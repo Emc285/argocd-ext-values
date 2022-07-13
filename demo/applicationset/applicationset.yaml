@@ -5,10 +5,10 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/Emc285/argocd-ext-values.git
+        repoURL: https://github.com/Emc285/JT-values-argocd.git
         revision: HEAD
         files:
-          - path: "values.yaml"
+          - path: "configs/**/values.yaml"
   template:
     metadata:
       name: test
@@ -18,10 +18,6 @@ spec:
         path: demo
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         targetRevision: HEAD
-        helm:
-          valueFiles:
-            - valuesxyz.yaml
-            - values-tst.yaml
       destination:
         server: https://kubernetes.default.svc
         namespace: tst
