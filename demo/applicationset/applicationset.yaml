@@ -11,7 +11,7 @@ spec:
           - path: configs/tst/values.yaml
   template:
     metadata:
-      name: '{{cluster.name}}-guestbook'
+      name: test
     spec:
       project: default
       source:
