@@ -11,7 +11,7 @@ spec:
           - path: "configs/**/values.yaml"
   template:
     metadata:
-      name: test
+      name: "{{ namespace }}-test"
     spec:
       project: default
       source:
