@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         revision: HEAD
         files:
-          - path: "configs/tst/values.yaml"
+          - path: "values.yaml"
   template:
     metadata:
       name: test
