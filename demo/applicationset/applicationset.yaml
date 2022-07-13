@@ -15,11 +15,11 @@ spec:
     spec:
       project: default
       source:
-        helm:
-          valueFiles:
-            - values.yaml
-          values: |-
-            {{values}}
+#        helm:
+#          valueFiles:
+#            - values.yaml
+#          values: |-
+#            {{values}}
         repoURL: https://github.com/Emc285/JT-values-argocd.git
         targetRevision: HEAD
         path: "configs/nginx"
