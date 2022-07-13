@@ -8,13 +8,18 @@ spec:
         repoURL: https://github.com/Emc285/JT-values-argocd.git
         revision: HEAD
         files:
-          - path: "configs/**/values.yaml"
+          - path: configs/tst/values.yaml
   template:
     metadata:
       name: test
     spec:
       project: default
       source:
+        helm:
+          valueFiles:
+            - values.yaml
+          values: |-
+            {{values}}
         path: demo
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         targetRevision: HEAD
