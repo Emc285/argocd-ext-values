@@ -18,9 +18,9 @@ spec:
         path: demo
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         targetRevision: main
-        helm:
-          valueFiles:
-            - valuesxyz.yaml
+#        helm:
+#          valueFiles:
+#            - valuesxyz.yaml
       destination:
         server: https://kubernetes.default.svc
         namespace: tst
