@@ -7,7 +7,11 @@ spec:
     - git:
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         revision: HEAD
-        files:
+#        values:
+#          override: |
+#            values.yaml
+#        files:
+        directories:
           - path: demo
   template:
     metadata:
@@ -19,10 +23,12 @@ spec:
 #          valueFiles:
 #            - values.yaml
 #          values: |-
-#            {{values}}
-        repoURL: https://github.com/Emc285/JT-values-argocd.git
+##            {{values}}
+#          values: |
+#            values.yaml
+        repoURL: https://github.com/Emc285/argocd-ext-values.git
         targetRevision: HEAD
-        path: "configs/nginx"
+        path: demo
       destination:
-        server: "https://kubernetes.default.svc"
-        namespace: default
+        server: https://kubernetes.default.svc
+        namespace: tst
