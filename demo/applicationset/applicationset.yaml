@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         revision: HEAD
         files:
-          - path: configs/tst/values.yaml
+          - path: "configs/tst/values.yaml"
   template:
     metadata:
       name: test
@@ -17,10 +17,11 @@ spec:
       source:
         path: demo
         repoURL: https://github.com/Emc285/argocd-ext-values.git
-        targetRevision: main
-#        helm:
-#          valueFiles:
-#            - valuesxyz.yaml
+        targetRevision: HEAD
+        helm:
+          valueFiles:
+            - valuesxyz.yaml
+            - values-tst.yaml
       destination:
         server: https://kubernetes.default.svc
         namespace: tst
