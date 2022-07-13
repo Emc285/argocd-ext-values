@@ -19,7 +19,7 @@ spec:
           valueFiles:
             - values.yaml
           values: |-
-            {{values}}
+            {{path}}
         path: demo
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         targetRevision: HEAD
