@@ -3,6 +3,8 @@ namespaces:
   - cq
   - tst
 
+name: app
+
 replicaCount: ''
 
 service:
