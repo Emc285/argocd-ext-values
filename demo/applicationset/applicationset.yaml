@@ -16,8 +16,7 @@ spec:
       project: default
       source:
         directory:
-          include:
-            - 'values-tst.yaml'
+          include: 'values-tst.yaml'
 #        helm:
 #          valueFiles:
 #            - values.yaml
