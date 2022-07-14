@@ -18,7 +18,7 @@ spec:
         helm:
           valueFiles:
             - values.yaml
-            - '{{path}}/values-tst.yaml'
+            - '{{path.filename}}'
 #          values: |-
 #            {{values}}
         path: demo
