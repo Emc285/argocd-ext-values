@@ -1,14 +1,14 @@
 namespaces:
-- prd
-- cq
-- tst
+  - prd
+  - cq
+  - tst
 
 replicaCount: ''
 
 service:
-type: NodePort
-port: 30008
+  type: NodePort
+  port: 30008
 
 image:
-repository: amralaayassen/helm-app
-pullPolicy: IfNotPresent
+  repository: amralaayassen/helm-app
+  pullPolicy: IfNotPresent
