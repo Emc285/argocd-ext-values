@@ -7,7 +7,7 @@ spec:
     - git:
         repoURL: https://github.com/Emc285/JT-values-argocd.git
         revision: HEAD
-        files:
+        directories:
           - path: configs/*
   template:
     metadata:
