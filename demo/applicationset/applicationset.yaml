@@ -16,12 +16,11 @@ spec:
       project: default
       source:
         helm:
-          parameters:
 #          valueFiles:
 #            - values.yaml
             - '{{path.filename}}'
-          values: |-
-            {{values}}
+#          values: |-
+#            {{values}}
         path: demo
         repoURL: https://github.com/Emc285/argocd-ext-values.git
         targetRevision: HEAD
