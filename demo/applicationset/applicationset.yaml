@@ -15,9 +15,13 @@ spec:
     spec:
       project: default
       source:
-        helm:
-          valueFiles:
-            - values.yaml
+        directory:
+          include:
+            - 'values.yaml'
+            - 'values-tst.yaml'
+#        helm:
+#          valueFiles:
+#            - values.yaml
 #          values: |-
 #            {{values}}
         path: demo
