@@ -5,6 +5,8 @@ namespaces:
 
 name: app2
 
+nameOverride: testecenas
+
 replicaCount: ''
 
 service:
