@@ -1,3 +1,1 @@
 # argocd-ext-values
-
-.....
