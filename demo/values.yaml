@@ -3,7 +3,7 @@ namespaces:
 - cq
 - tst
 
-name: app
+name: ''
 
 service:
 type: NodePort
