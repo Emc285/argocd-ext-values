@@ -3,7 +3,7 @@ namespaces:
 - cq
 - tst
 
-name: ''
+replicaCount: ''
 
 service:
 type: NodePort
