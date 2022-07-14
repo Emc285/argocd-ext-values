@@ -17,7 +17,6 @@ spec:
       source:
         directory:
           include:
-            - 'values.yaml'
             - 'values-tst.yaml'
 #        helm:
 #          valueFiles:
