@@ -1,0 +1,18 @@
+namespaces:
+  - prd
+  - cq
+  - tst
+
+name: app
+
+nameOverride: testecenas
+
+replicaCount: ''
+
+service:
+  type: NodePort
+  port: 30008
+
+image:
+  repository: amralaayassen/helm-app
+  pullPolicy: IfNotPresent
