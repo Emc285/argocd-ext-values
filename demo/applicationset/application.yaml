@@ -14,14 +14,14 @@ spec:
     plugin:
       env:
         - name:  REPO_NAME
-          value: "repo-1038989619"
+          value: "traefik"
         - name:  REPO_URL
-          value: "https://github.com/Emc285/argocd-ext-values.git"
+          value: "<https://helm.traefik.io/traefik>"
         - name:  CHART_NAME
-          value: "app"
+          value: "traefik"
         - name:  CHART_VERSION
-          value: "0.1.0"
+          value: "10.6.2"
         - name:  COMMAND
-          value: "--values values.yaml"
+          value: "--values traefik-values.yaml"
       name: helm-resolver
     repoURL: https://github.com/Emc285/argocd-ext-values.git
