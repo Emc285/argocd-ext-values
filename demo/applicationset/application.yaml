@@ -16,7 +16,7 @@ spec:
         - name:  REPO_NAME
           value: "test-emc"
         - name:  REPO_URL
-          value: "https://github.com/Emc285/argocd-ext-values/configs/tst"
+          value: "https://emc285.github.io/argocd-ext-values/"
         - name:  CHART_NAME
           value: "app"
         - name:  CHART_VERSION
