@@ -16,9 +16,9 @@ spec:
         - name:  REPO_NAME
           value: "test-emc"
         - name:  REPO_URL
-          value: "https://emc285.github.io/argocd-ext-values/"
+          value: "https://emc285.github.io/helm-chart/"
         - name:  CHART_NAME
-          value: "app"
+          value: "helm-chart-test"
         - name:  CHART_VERSION
           value: "0.1.0"
         - name:  COMMAND
