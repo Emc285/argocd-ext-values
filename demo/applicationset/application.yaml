@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: traefik-private-values
+  name: app-teste
   namespace: argocd
 spec:
   destination:
@@ -16,7 +16,7 @@ spec:
         - name:  REPO_NAME
           value: "teste"
         - name:  REPO_URL
-          value: "<https://helm.traefik.io/traefik>"
+          value: "https://github.com/Emc285/argocd-ext-values.git"
         - name:  CHART_NAME
           value: "app"
         - name:  CHART_VERSION
