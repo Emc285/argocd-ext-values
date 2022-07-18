@@ -11,8 +11,8 @@ version: 0.1.0
 # incremented each time you make changes to the application.
 appVersion: latest
 
-dependencies:
-  - name: teste
-    condition: teste.enabled
-    version: 0.1.0
-    repository: https://github.com/Emc285/JT-values-argocd/tree/main/configs/tst
+#dependencies:
+#  - name: teste
+#    condition: teste.enabled
+#    version: 0.1.0
+#    repository: https://github.com/Emc285/JT-values-argocd/tree/main/configs/tst

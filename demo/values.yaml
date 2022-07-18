@@ -7,7 +7,7 @@ name: app
 
 nameOverride: testecenas
 
-replicaCount: ''
+replicaCount: 3
 
 service:
   type: NodePort

@@ -1,22 +1,27 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-test
+  name: traefik-private-values
   namespace: argocd
 spec:
   destination:
-    namespace: tst
     server: https://kubernetes.default.svc
+    namespace: tst
   project: default
-  sources:                                          # new field
-    # application that consists of MongoDB and ElasticSearch resources
-    - repoURL: https://github.com/Emc285/JT-values-argocd.git  # path is missing so no manifests are generated
-      targetRevision: master
-      ref: myRepo                                 # repo is available via symlink "my-repo"
-    - repoURL: https://github.com/Emc285/argocd-ext-values.git
-      targetRevision: master
-      path: demo               # path "incubator/elasticsearch" is used to generate manifests
-      helm:
-        valueFiles:
-          - $myRepo/configs/tst/values.yaml
-          - values.yaml # values.yaml is located in source with reference name $myRepo
+  source:
+    path: demo
+    plugin:
+      env:
+        - name:  REPO_NAME
+          value: "teste"
+        - name:  REPO_URL
+          value: "<https://helm.traefik.io/traefik>"
+        - name:  CHART_NAME
+          value: "app"
+        - name:  CHART_VERSION
+          value: "0.1.0"
+        - name:  COMMAND
+          value: "--values values.yaml"
+      name: helm-resolver
+    repoURL: https://github.com/Emc285/argocd-ext-values.git
